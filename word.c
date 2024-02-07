@@ -412,7 +412,7 @@ delfword(int f, int n)
 	if (n < 0)
 		return (FALSE);
 
-	/* purge kill buffer */
+	/* purge kill zone */
 	if ((lastflag & CFKILL) == 0)
 		kdelete();
 
@@ -467,7 +467,7 @@ delbword(int f, int n)
 	if (n < 0)
 		return (FALSE);
 
-	/* purge kill buffer */
+	/* purge kill zone */
 	if ((lastflag & CFKILL) == 0)
 		kdelete();
 	thisflag |= CFKILL;
