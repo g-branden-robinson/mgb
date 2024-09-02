@@ -201,10 +201,9 @@ stopsearch:
 	if (!inmacro) {
 		if (rcnt == 0)
 			ewprintf("(No replacements done)");
-		else if (rcnt == 1)
-			ewprintf("(1 replacement done)");
 		else
-			ewprintf("(%d replacements done)", rcnt);
+			ewprintf("(%d replacement%s done)", rcnt,
+				 rcnt == 1 ? "" : "s");
 	}
 	return (TRUE);
 }
@@ -587,7 +586,7 @@ killmatches(int cond)
 			clp = lforw(clp);
 	}
 
-	ewprintf("%d line(s) deleted", count);
+	ewprintf("%d line%s deleted", count, count == 1 ? "" : "s");
 	if (count > 0)
 		curwp->w_rflag |= WFMOVE;
 
@@ -653,9 +652,16 @@ countmatches(int cond)
 	}
 
 	if (cond)
-		ewprintf("Number of lines matching: %d", count);
+		ewprintf("%d line%s match%s regexp \"%s\"", count,
+			 count == 1 ? "" : "s",
+			 count == 1 ? "es" : "",
+			 re_pat);
 	else
-		ewprintf("Number of lines not matching: %d", count);
+		ewprintf("%d line%s do%s not match regexp \"%s\"",
+			 count,
+			 count == 1 ? "" : "s",
+			 count == 1 ? "es" : "",
+			 re_pat);
 
 	return (TRUE);
 }
