@@ -527,7 +527,7 @@ delmatchlines(int f, int n)
 {
 	int	s;
 
-	if ((s = re_readpattern("Flush lines (containing match for regexp)"))
+	if ((s = re_readpattern("Delete lines matching regexp"))
 	    != TRUE)
 		return (s);
 
@@ -543,7 +543,7 @@ delnonmatchlines(int f, int n)
 {
 	int	s;
 
-	if ((s = re_readpattern("Keep lines (containing match for regexp)"))
+	if ((s = re_readpattern("Delete lines not matching regexp"))
 	    != TRUE)
 		return (s);
 
