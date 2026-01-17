@@ -33,7 +33,101 @@ logic to report an ambiguous prefix.
 Want C-h in minibuffer for `quickhelp`; save minibuffer contents,
 replace it with 1 line (< 80 columns) if help, and await C-h to pop
 back.
+- Alternative 1: Steal a line above the modeline just for diagnostics,
+  as nano (normally) does.
+- Alternative 2: see "pop-up" below.
 
 implement eval-region? [GNU Emacs]
 
+Add C-h t to open the tutorial, like troglobit-mg.
+	Put "tags" in it, like Vim documentation, to enable
+	context-sensitive help?
+
+	Having done that, apply DRY, store these help items in snippets
+	we can `so` in to the man page.
+
+	Then move the man page *.1 to *.1.in and write a target to
+	produce the *.1 file from *.1.in using soelim.
+
+	Learn how to do that in CMake and Meson.  :-|
+
 Should I-search remember last search?
+	It does, just type the search command again, e.g., "C-s C-s".
+	See above: "Document minibuffer bindings in mg.1"
+
+Make `next-error` work on '*Shell Command Output*'
+	need next-error-select-buffer from GNU Emacs
+
+This editor badly needs a quick-fix mode like "vi -q" and it's already
+got MOST of what it needs to implement it.  Why can't you populate the
+"next-error" [sic] buffer from a command-line option?  All kinds of
+commands at long last produce GCC-diagnostic-style output, including
+grep.  The ability to use that output to drive an editor session is
+(or should be!) within easy reach.
+
+Should `join-line` take its argument more literally?  What does GNU
+Emacs do?
+
+Why isn't the cscope buffer in a form useful for "next-error"?
+
+Missing directory, create?  XXX and if that fails?
+
+Migrate from "prefix-region" to "set-fill-prefix" (GNU Emacs)
+
+De-optimize for 110 and 300 baud terminal connections, which were still
+a thing when MicroEmacs was written.  Hence the laconic, and confusing,
+"Quit" traditionally spat at the emacs user.  On the bright side, that
+repeated stentorian utterance, misinterpreted as an imperative, likely
+drove uptake of vi.  (Maybe it was intended to.)  Diagnostic messages
+must express clear ideas, employing editor jargon only where necessary,
+and never using terminology that appears only in editor source code.
+
+More ambitious stuff
+--------------------
+
+* DYNAMIC ABBREVIATION MODE.  This is a killer feature.  (It took too
+  long to get to the vi world, but finally made it.)
+
+* What's the backup/autosave story?  Can you call yourself a serious
+  text editor without these features?  You should always be able to
+  write all open buffers (if modified).  Do any editors speculatively
+  write to the disk to see if a starvation situation is approaching, and
+  warn the user?  What strategies do they use?
+
+* Use XDG_CONFIG_HOME for storage of precious temporaries and autosaved
+  files, and for the existing log feature (see below).
+
+* Steal nano's idea for help lines for commonly used bindings. (Because
+  I am old, I vaguely recollect that, in cruder form, this may have
+  been a feature of WordStar, which troglobit-mg seems to imitate.)
+  Copy nano's smartness: the more screen real estate it has, the more
+  bindings it shows you.  As nano implements it, this feature is more
+  helpful to users with crazily wide terminal windows than to everyone
+  else.  So make the height configurable (in terms of screen lines? or
+  percentage of terminal window height?).
+
+* Link with full-on curses and ncurses's panel library.  Use that to
+  enable pop-up windows for diagnostics from the minibuffer, which right
+  now are badly constrained in terms of space and overwrite the
+  immediate context, which is harshly user-hostile.  Make any such
+  pop-up window:
+
+  - semi-modal
+  - resizable
+  - movable
+
+  ...because inevitably, the pop-up will overlay a buffer window
+  containing material the user needs to keep visible to decide their
+  next action.
+
+* Recursive edits, with named stack entries to remind you what the hell
+  you where working on when you got sidetracked.
+
+* Use the logging feature to statistically measure the time delay before
+  each binding the user employs.  A short delay means the user knows the
+  command and doesn't need it on the nano-esque help lines.  Combined
+  with a per-binding population count, that may be all we need.  We
+  could rank the items in the help lines by the product of the
+  population count and the pre-stroke delay.  A command that is
+  frequently used but also frequently dithered before is one the user
+  wants/needs help remembering.
