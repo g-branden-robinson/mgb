@@ -3,7 +3,7 @@
 /* This file is in the public domain. */
 
 /*
- * kbd.h: type definitions for symbol.c and kbd.c for mg experimental
+ * kbd.h: type definitions for symbol.c and kbd.c for mgb experimental
  */
 
 struct map_elt {

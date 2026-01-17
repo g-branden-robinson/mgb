@@ -215,7 +215,7 @@ ffgetline(FILE *ffp, char *buf, int nbuf, int *nbytes)
  * be newest of the new-speak. The error handling is all in "file.c".
  * We do a copy instead of a rename since otherwise another process
  * with an open fd will get the backup, not the new file.  This is
- * a problem when using mg with things like crontab and vipw.
+ * a problem when using mgb with things like crontab and vipw.
  */
 int
 fbackupfile(const char *fn)
@@ -700,8 +700,8 @@ backuptohomedir(int f, int n)
 }
 
 /*
- * For applications that use mg as the editor and have a desire to keep
- * '~' files in TMPDIR, toggle the location: TMPDIR | ~/.mg.d
+ * For applications that use mgb as the editor and have a desire to keep
+ * '~' files in TMPDIR, toggle the location: TMPDIR | ~/.mgb.d
  */
 int
 toggleleavetmp(int f, int n)

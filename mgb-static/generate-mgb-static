@@ -21,7 +21,7 @@ fi
 usage() {
     name=${0##*/}
     cat << EOF >&2
-This script can build a static binary for mg, like this:
+This script can build a static binary for mgb, like this:
 ./$name [amd64|i386|arm64v8|arm32v7] [tag|latest]
 Make sure your architecture is compatible.
 EOF
@@ -58,32 +58,32 @@ case $2 in
         ;;
 esac
 
-# Create the Containerfile
+# Create the Containerfile (UNTESTED BY GBR)
 cat << EOF > Containerfile
 FROM docker.io/$ext/alpine
 RUN apk upgrade
 RUN apk add git libbsd-static libbsd-dev ncurses-dev musl-dev ncurses-static gcc make
-RUN git clone https://github.com/hboetes/mg.git
-WORKDIR mg
+RUN git clone https://github.com/g-branden-robinson/mgb.git
+WORKDIR mgb
 RUN TAG=\$($TCMD); \
     git checkout \$TAG; \
     make STATIC=1; \
-    strip mg; \
-    ln mg mg-\$TAG-static-$ext
+    strip mgb; \
+    ln mgb mgb-\$TAG-static-$ext
 EOF
 
 
 cat << EOF > ./helper-script
 #!/bin/sh
-mnt=\$(podman image mount localhost/mg-static)
-cp \$mnt/mg/mg-*static-* .
+mnt=\$(podman image mount localhost/mgb-static)
+cp \$mnt/mgb/mgb-*static-* .
 EOF
 chmod 755 ./helper-script
 
-podman image rm localhost/mg-static
-buildah build -f Containerfile -t mg-static
+podman image rm localhost/mgb-static
+buildah build -f Containerfile -t mgb-static
 podman unshare ./helper-script
 
 # Clean up the mess
 rm -f Containerfile helper-script
-podman image rm localhost/mg-static
+podman image rm localhost/mgb-static

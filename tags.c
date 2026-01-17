@@ -190,7 +190,7 @@ pushtag(char *tok)
 
 	doto = curwp->w_doto;
 	dotline = curwp->w_dotline;
-	/* record absolute filenames. Fixes issues when mg's cwd is not the
+	/* record absolute filenames. Fixes issues when mgb's cwd is not the
 	 * same as buffer's directory.
 	 */
 	if (strlcpy(bname, curbp->b_cwd, sizeof bname)
@@ -501,7 +501,7 @@ curtoken(int f, int n, char *token)
 	char c;
 
 	/* Underscore character is to be treated as "inword" while
-	 * processing tokens unlike mg's default word traversal. Save
+	 * processing tokens unlike mgb's default word traversal. Save
 	 * and restore its cinfo value so that tag matching works for
 	 * identifier with underscore.
 	 */

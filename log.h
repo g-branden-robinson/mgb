@@ -3,7 +3,7 @@
 /* This file is in the public domain. */
 
 /*
- * Specifically for mg logging functionality.
+ * Specifically for mgb logging functionality.
  *
  */
 int	 mglog(PF, void *);

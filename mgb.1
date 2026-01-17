@@ -2,20 +2,20 @@
 .\" This file is in the public domain.
 .\"
 .Dd $Mdocdate: July 10 2024 $
-.Dt mg 1
-.Os "mg portable 2a (hboetes-20230501+gbr)"
+.Dt mgb 1
+.Os mgb
 .Sh Name
-.Nm mg
+.Nm mgb
 .Nd Emacs-like text editor
 .Sh Synopsis
-.Nm mg
+.Nm mgb
 .Op Fl nR
 .Op Fl f Ar mode-command
 .Op Fl u Ar startup-file
 .Op Li + Ns Ar line-number
 .Op Ar
 .Pp
-.Nm mg
+.Nm mgb
 .Op Fl nR
 .Op Fl b Ar batch-file
 .Op Fl f Ar mode-command
@@ -369,7 +369,7 @@ character to the file name.
 The
 .Ic backup\-to\-home\-directory
 command toggles a behavior such that the editor backs up to
-.Pa \[ti]/.mg.d
+.Pa \[ti]/.mgb.d
 instead,
 further renaming files to retain uniqueness.
 When
@@ -795,7 +795,7 @@ Move point to the first character on the line that is not a space or
 tab.
 .It Ic backup\-to\-home\-directory
 Save backup files to a
-.Pa \[ti]/.mg.d
+.Pa \[ti]/.mgb.d
 directory instead of that of the edited file;
 requires
 .Ic make\-backup\-files
@@ -1246,7 +1246,7 @@ Modify the behaviour of
 such that backup files that would normally reside in
 .Pa /tmp
 are left there and not moved to the
-.Pa \[ti]/.mg.d
+.Pa \[ti]/.mgb.d
 directory.
 .It Ic line\-number\-mode
 Toggle display of point's line number in the modeline.
@@ -1797,9 +1797,9 @@ Close the current dired buffer.
 .El
 .Ss Configuration
 There are two configuration files,
-.Pa .mg
+.Pa .mgb
 and
-.Pa .mg\-TERM .
+.Pa .mgb\-TERM .
 Here,
 .Ev TERM
 represents the name of the terminal type;
@@ -1808,7 +1808,7 @@ if the terminal type is set to
 .Dq vt100 ,
 .Nm
 will use
-.Pa .mg\-vt100
+.Pa .mgb\-vt100
 as a startup file.
 The terminal type startup file is used first.
 .Pp
@@ -1853,14 +1853,14 @@ see subsection
 above.
 .El
 .Sh Files
-.Bl -tag -width /usr/share/doc/mg/tutorial -compact
-.It Pa \[ti]/.mg
+.Bl -tag -width /usr/share/doc/mgb/tutorial -compact
+.It Pa \[ti]/.mgb
 normal startup file
-.It Pa \[ti]/.mg\-TERM
+.It Pa \[ti]/.mgb\-TERM
 terminal-specific startup file
-.It Pa \[ti]/.mg.d
+.It Pa \[ti]/.mgb.d
 alternative backup file location
-.It Pa /usr/share/doc/mg/tutorial
+.It Pa /usr/share/doc/mgb/tutorial
 concise tutorial
 .El
 .Sh "Exit status"

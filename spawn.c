@@ -16,7 +16,7 @@
 #include "def.h"
 
 /*
- * This causes mg to send itself a stop signal.  It assumes the parent
+ * This causes mgb to send itself a stop signal.  It assumes the parent
  * shell supports POSIX job control.  If the terminal supports an alternate
  * screen, we will switch to it.
  */

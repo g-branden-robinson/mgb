@@ -4,7 +4,7 @@ fill-paragraph doesn't really work, not even with indent-mode set
 - indent-mode is not a GNU Emacs thing
 - maybe fill-paragraph should "just work" (like GNU Emacs does)
 
-Document minibuffer bindings in mg.1
+Document minibuffer bindings in mgb.1
 
 Maybe split out a set-default-tab-width.  (That's currently the effect
 if you run it with an argument.)  Neither it nor `set-tab-width` are in

@@ -1,10 +1,10 @@
-# meson.buid file for mg
+# meson.buid file for mgb
 
 # This file has been written by Han Boetes <hboetes@gmail.com> and is
 # released in Public Domain.
 
 project(
-  'mg', 'c',
+  'mgb', 'c',
   version: run_command('git', 'describe', '--tags', check: true).stdout().strip(),
   default_options: ['warning_level=1'],
 )
@@ -19,7 +19,7 @@ add_global_arguments('-Wno-strict-aliasing', language : 'c')
 add_global_arguments('-Wno-deprecated-declarations', language : 'c')
 
 executable(
-  'mg', 'cinfo.c', 'echo.c', 'line.c', 'ttyio.c', 'log.c',
+  'mgb', 'cinfo.c', 'echo.c', 'line.c', 'ttyio.c', 'log.c',
   'autoexec.c', 'bell.c', 'cscope.c', 'dir.c', 'dired.c', 'file.c',
   'fileio.c', 'grep.c', 'help.c', 'kbd.c', 'macro.c', 're_search.c',
   'region.c', 'search.c', 'spawn.c', 'tags.c', 'tty.c', 'ttykbd.c',
@@ -31,4 +31,4 @@ executable(
   dependencies: [bsdlib_dep, ncurses_dep],
 )
 
-install_man('mg.1')
+install_man('mgb.1')

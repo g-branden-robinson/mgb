@@ -61,8 +61,8 @@ ttopen(void)
  * This function sets the terminal to RAW mode, as defined for the current
  * shell.  This is called both by ttopen() above and by spawncli() to
  * get the current terminal settings and then change them to what
- * mg expects.	Thus, tty changes done while spawncli() is in effect
- * will be reflected in mg.
+ * mgb expects.  Thus, tty changes done while spawncli() is in effect
+ * will be reflected in mgb.
  */
 int
 ttraw(void)

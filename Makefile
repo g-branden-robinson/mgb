@@ -1,6 +1,6 @@
 # $OpenBSD: Makefile,v 1.35 2019/07/18 05:57:48 lum Exp $
 
-PROG=	mg
+PROG=	mgb
 
 LDADD+=	`pkg-config --libs ncurses` -lutil
 DPADD+=	${LIBUTIL}
@@ -9,7 +9,7 @@ DPADD+=	${LIBUTIL}
 #
 #	REGEX		-- create regular expression functions.
 #	STARTUPFILE	-- look for and handle initialization file.
-#	MGLOG		-- debug mg internals to a log file.
+#	MGBLOG		-- debug mgb internals to a log file.
 #
 CFLAGS+=-Wall -DREGEX `pkg-config --cflags-only-I ncurses`
 
@@ -30,9 +30,9 @@ SRCS+=	cmode.c cscope.c dired.c grep.c interpreter.c tags.c
 #SRCS+=	log.c
 
 afterinstall:
-	${INSTALL} -d -o root -g wheel ${DESTDIR}${DOCDIR}/mg
+	${INSTALL} -d -o root -g wheel ${DESTDIR}${DOCDIR}/mgb
 	${INSTALL} ${INSTALL_COPY} -o ${DOCOWN} -g ${DOCGRP} -m ${DOCMODE} \
-	    ${.CURDIR}/tutorial ${DESTDIR}${DOCDIR}/mg
+	    ${.CURDIR}/tutorial ${DESTDIR}${DOCDIR}/mgb
 
 .include <bsd.prog.mk>
 

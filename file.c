@@ -444,7 +444,7 @@ poptofile(int f, int n)
  * Read the file "fname" into the current buffer.  Make all of the text
  * in the buffer go away, after checking for unsaved changes.  This is
  * called the handlers for several commands, including "read" and
- * "visit-tags-table" command, and by main(), to handle "mg file".
+ * "visit-tags-table" command, and by main(), to handle "mgb file".
  */
 int
 readin(char *fname)

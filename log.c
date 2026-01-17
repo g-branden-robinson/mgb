@@ -8,23 +8,23 @@
  */
 
 /*
- * Record a history of an mg session for temporal debugging.
+ * Record a history of an mgb session for temporal debugging.
  * Sometimes pressing a key will set the scene for a bug only visible 
  * dozens of keystrokes later. gdb has its limitations in this scenario.
  *
- * Note this file is not compiled into mg by default, you will need to
+ * Note this file is not compiled into mgb by default, you will need to
  * amend the 'Makefile' for that to happen. Because of this, the code
  * is subject to bit-rot. However, I know myself and others have 
  * written similar functionally often enough, that recording the below 
- * in a code repository could aid the development efforts of mg, even
+ * in a code repository could aid the development efforts of mgb, even
  * if it requires a bit of effort to get working. The current code is
  * written in the spirit of debugging (quickly and perhaps not ideal,
  * but it does what is required well enough). Should debugging become
- * more formalised within mg, then I would expect that to change.
+ * more formalised within mgb, then I would expect that to change.
  *
  * If you open a file with long lines to run through this debugging 
  * code, you may run into problems with the 1st fprintf statement in
- * in the mglog_lines() function. mg sometimes segvs at a strlen call
+ * in the mglog_lines() function. mgb sometimes segvs at a strlen call
  * in fprintf - possibly something to do with the format string?
  * 	"%s%p b^%p f.%p %d %d\t%c|%s\n"
  * When I get time I will look into it. But since my debugging 

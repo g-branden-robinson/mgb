@@ -1,11 +1,11 @@
-# Makefile for mg
+# Makefile for mgb
 
 # This Makefile has been written by Han Boetes
 # <hboetes@gmail.com> and is released in Public Domain.
 
 # *sigh* Those debian folks are really tidy on their licenses.
 
-name=		mg
+name=		mgb
 
 prefix=		/usr/local
 bindir=		$(prefix)/bin

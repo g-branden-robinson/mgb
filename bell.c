@@ -8,7 +8,7 @@
  */
 
 /*
- * Control how mg communicates with the user.
+ * Control how mgb communicates with the user.
  */
 
 #include <sys/queue.h>

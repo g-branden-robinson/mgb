@@ -37,7 +37,7 @@ static struct balance {
 
 /*
  * Hack to show matching paren.  Self-insert character, then show matching
- * character, if any.  Bound to "blink-and-insert".  Used in the mg startup
+ * character, if any.  Bound to "blink-and-insert".  Used in the mgb startup
  * file to amend the default cursor behaviour of a key press, e.g:
  *   global-set-key "%" blink-and-insert
  */

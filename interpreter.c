@@ -16,7 +16,7 @@
  * At the moment there is no manual page reference to this file. The code below
  * is liable to change, so use at your own risk!
  *
- * If you do want to do some testing, you can add some lines to your .mg file
+ * If you do want to do some testing, you can add some lines to your .mgb file
  * like:
  *
  * 1. Give multiple arguments to a function that usually would accept only one:
@@ -329,7 +329,7 @@ parse(char *begp, const char *par1, const char *par2, int blkid, int expctr,
 	if (doregex(regs, begp))
 		return(exitinterpreter(NULL, NULL, FALSE));
 
-	/* mg function name regex */
+	/* mgb function name regex */
 	regs = "^[A-Za-z-]+$";
         if (doregex(regs, begp))
 		return(excline(begp, 0, 0));
@@ -448,7 +448,7 @@ parsexp(char *begp, const char *par1, const char *par2, int blkid, int expctr,
 	*fendp = '\0';
 
 	/*
-	 * If no extant mg command found, just return.
+	 * If no extant mgb command found, just return.
 	 */
 	if ((funcp = name_function(cmdp)) == NULL) {
 		dobeep();
@@ -642,7 +642,7 @@ founddef(char *defstr, int blkid, int expctr, int hasval, int elen)
 	*vendp = '\0';
 
 	/*
-	 * Check list name is not an existing mg function.
+	 * Check list name is not an existing mgb function.
 	 */
 	if (name_function(vnamep) != NULL) {
 		dobeep();
@@ -789,7 +789,7 @@ expandvals(char *cmdp, char *valp, char *bp)
 
 /*
  * Finished with buffer evaluation, so clean up any vars.
- * Perhaps keeps them in mg even after use,...
+ * Perhaps keeps them in mgb even after use,...
  */
 /*static int
 clearvars(void)

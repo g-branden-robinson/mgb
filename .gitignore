@@ -1,5 +1,5 @@
 packages
 *.o
-mg
-mg-static/mg-*
+mgb
+mgb-static/mgb-*
 build/
