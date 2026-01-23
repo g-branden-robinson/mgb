@@ -13,7 +13,7 @@
 
 #include "def.h"
 
-const char	version[] = "Mg 2a (hboetes-20230501+gbr)";
+const char	version[] = "mgb (based on mg hboetes-20230501)";
 
 /*
  * Display the version; copy the version string into the minibuffer.
