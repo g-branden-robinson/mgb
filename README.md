@@ -68,10 +68,11 @@ So I took `mg` for a spin and rapidly reached a few conclusions.
     writing, nor seek to cultivate that ability in themselves.
     Whatever label they self-apply--"hacker", "developer", "engineer",
     or "architect", one is assured that they are members of a superior
-    species.  That implication is, of course, nonsense--and a warning
-    sign of a toxic personality.
+    species that does not require high-quality documentation.  That
+    implication is, of course, nonsense--and a warning sign of a toxic
+    personality.
 
-4.  `mg`'s  man page was written using the `mdoc` dialect.  `mdoc` is an
+4.  `mg`'s man page was written using the `mdoc` dialect.  `mdoc` is an
     alternative to the older `man` macros for man page composition, and
     like GNU Emacs, it is at the center of a cult of extreme partisans.
     (You can recognize them because they can all agree that it's better
