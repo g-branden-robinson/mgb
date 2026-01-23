@@ -725,7 +725,7 @@ load(FILE *ffp, const char *fname)
 			 * case a multi-char function key is pressed.
 			 */
 			fflush(stdin);
-			getchar();
+			(void) getchar();
 			fflush(stdin);
 			break;
 		}
