@@ -3,7 +3,7 @@
 /* This file is in the public domain. */
 
 /*
- * Spawn.  Actually just suspends Mg.
+ * Spawn.  Actually just suspends mgb.
  * Assumes POSIX job control.
  */
 

@@ -3,11 +3,11 @@
 /* This file is in the public domain. */
 
 /*
- *	regular expression search commands for Mg
+ *	regular expression search commands for mgb
  *
  * This file contains functions to implement several of gnuemacs's regular
- * expression functions for Mg.  Several of the routines below are just minor
- * re-arrangements of Mg's non-regular expression search functions.  Some of
+ * expression functions for mgb.  Several of the routines below are just minor
+ * re-arrangements of mgb's non-regular expression search functions.  Some of
  * them are similar in structure to the original MicroEMACS, others are
  * modifications of Rich Ellison's code.  Peter Newton re-wrote about half of
  * them from scratch.

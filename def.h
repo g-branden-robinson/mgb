@@ -4,7 +4,7 @@
 
 /*
  * This file is the general header file for all parts
- * of the Mg display editor. It contains all of the
+ * of the mgb display editor. It contains all of the
  * general definitions and macros. It also contains some
  * conditional compilation flags. All of the per-system and
  * per-terminal definitions are in special header files.
@@ -381,10 +381,10 @@ int		 ttwait(int);
 int		 charswaiting(void);
 
 /*
- * Functions that are Mg command handlers are protyped with two `int`
+ * Functions that are mgb command handlers are protyped with two `int`
  * arguments.  The first, conventionally named `f`, stores a flag
  * bitmask corresponding to the `FF*` macros above.  The second,
- * conventionally named `n`, is the value of the Mg command argument.
+ * conventionally named `n`, is the value of the mgb command argument.
  */
 
 /* dir.c */

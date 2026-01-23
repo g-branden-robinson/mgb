@@ -3,7 +3,7 @@
 /* This file is in the public domain. */
 
 /*
- * sys/default/chardef.h: character set specific #defines for Mg 2a
+ * sys/default/chardef.h: character set specific #defines for mgb
  * Warning: System specific ones exist
  */
 

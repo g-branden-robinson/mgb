@@ -6,9 +6,9 @@
  */
 
 /*
- * This file attempts to add some 'scripting' functionality into mg.
+ * This file attempts to add some 'scripting' functionality into mgb.
  *
- * The initial goal is to give mg the ability to use its existing functions
+ * The initial goal is to give mgb the ability to use its existing functions
  * and structures in a linked-up way. Hopefully resulting in user definable
  * functions. The syntax is 'scheme' like but currently it is not a scheme
  * interpreter.

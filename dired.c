@@ -2,7 +2,7 @@
 
 /* This file is in the public domain. */
 
-/* dired module for mg 2a
+/* dired module for mgb
  * by Robert A. Larson
  */
 

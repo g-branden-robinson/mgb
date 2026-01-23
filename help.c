@@ -3,7 +3,7 @@
 /* This file is in the public domain. */
 
 /*
- * Help functions for Mg 2
+ * Help functions for mgb
  */
 
 #include <sys/queue.h>
@@ -98,7 +98,7 @@ found:
 /*
  * This function creates a table, listing all of the command
  * keys and their current bindings, and stores the table in the
- * *help* pop-up buffer.  This lets Mg produce its own wall chart.
+ * *help* pop-up buffer.  This lets mgb produce its own wall chart.
  */
 int
 wallchart(int f, int n)
