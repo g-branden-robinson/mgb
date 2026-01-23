@@ -131,8 +131,6 @@ sudo meson install -C build
 
 # Plans
 
-- Finish renaming my fork from `mg` to `mgb` (rename the executable, the
-  man page, and so on).
 - Populate this `README` with hyperlinks.
 - Bring the man page to a state of perfection.
 - Assorted ideas to do with the code live in the file `TODO.gbr`.  None
