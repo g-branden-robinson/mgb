@@ -107,6 +107,7 @@ compile(int f, int n)
 		return (ABORT);
 	(void) strlcpy(compile_last_command, bufp,
 		       sizeof compile_last_command);
+	ewprintf("Compiling: \"%s\" ...", compile_last_command);
 
 	if ((bp = compile_mode("*compile*", cprompt)) == NULL)
 		return (FALSE);
