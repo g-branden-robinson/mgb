@@ -986,7 +986,7 @@ free_list(struct list *lp)
 {
 	struct list	*next;
 
-	while (lp) {
+	while (lp != NULL) {
 		next = lp->l_next;
 		free(lp->l_name);
 		free(lp);
